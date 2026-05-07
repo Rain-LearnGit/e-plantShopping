@@ -299,9 +299,7 @@ function ProductList({ onHomeClick }) {
       [plant.name]: true,
     }));
   };
-  const handleContinueShopping = () => {
-    setShowCart(false);
-  };
+
   return (
     <div>
       <div className="navbar" style={styleObj}>
@@ -355,7 +353,7 @@ function ProductList({ onHomeClick }) {
           </div>
         </div>
       </div>
-      {!showCart ? (<CartItem onContinueShopping={handleContinueShopping} />:
+      {!showCart ? (
         <div className="product-grid">
           {plantsArray.map((category, index) => (
             <div key={index}>
